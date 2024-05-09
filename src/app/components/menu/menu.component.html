@@ -1,0 +1,30 @@
+<nav class="sidemenu">
+  <ul>
+
+    <li>
+      <img src="assets/logo-polvo.png" width="40px" alt="">
+      <span class="logo">RPG System</span>
+    </li>
+
+    <li routerLink="/home">
+      <mat-icon>home</mat-icon>Home
+    </li>
+
+    <li routerLink="/cadastromesas">
+      <mat-icon>person_add</mat-icon>Cadastrar Sessão
+    </li>
+
+    <li routerLink="/mesas">
+      <mat-icon>person_add</mat-icon>Minhas Mesas
+    </li>
+
+    <li routerLink="/itens">
+      <mat-icon>person_add</mat-icon>Cadastrar Itens
+    </li>
+
+    <li class="logout" (click)="logout()">
+      <mat-icon>logout</mat-icon>Sair
+    </li>
+  </ul>
+
+</nav>

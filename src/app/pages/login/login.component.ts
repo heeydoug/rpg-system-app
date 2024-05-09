@@ -66,9 +66,9 @@ export class LoginComponent implements OnInit {
   async login() {
     const user = this.formLogin.value;
     const userCredendial = await this.authService.signIn(user.email, user.senha);
-    await this.router.navigate(['/home']);
+    localStorage.setItem('uid', userCredendial.user!.uid);
     console.log(userCredendial.user?.uid);
-    console.log('logado')
+    await this.router.navigate(['/home']);
     this.resetFormLogin();
 
   }
@@ -90,7 +90,4 @@ export class LoginComponent implements OnInit {
     this.resetFormRegistro();
   }
 
-  teste() {
-    this.openSnackBar('Usuário registrado com sucesso!', '')
-  }
 }

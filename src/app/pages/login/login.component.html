@@ -1,5 +1,5 @@
 <div class="outer-container">
-  <div class="container" id="container">
+  <div class="container-home" id="container">
     @if (showRegister){
       <div class="form-container login-container">
         <form action="#" [formGroup]="formRegistro">
@@ -10,7 +10,6 @@
           <input type="password" formControlName="senha" placeholder="Senha: ">
           <input type="password" formControlName="repitaSenha" placeholder="Repita a senha: ">
           <button (click)="register()">Registrar</button>
-          <button (click)="teste()">teste</button>
           <p>Já não possui cadastro? <span><a (click)="showRegisterForm()">Faça login</a> </span></p>
         </form>
       </div>
@@ -31,8 +30,6 @@
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
-          <button class="ghost" id="login">Login
-          </button>
         </div>
         <div class="overlay-panel overlay-right">
           <!-- Colar algo no card direito-->

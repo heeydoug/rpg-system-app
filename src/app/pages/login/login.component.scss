@@ -1,3 +1,4 @@
+
 h1{
   font-weight: 700;
   letter-spacing: -1.5px;
@@ -51,7 +52,7 @@ a:hover{
   height: 12px;
 }
 
-.container label{
+.container-home label{
   font-size: 14px;
   user-select: none;
   padding-left: 5px;
@@ -140,7 +141,7 @@ input{
 
 }
 
-.container{
+  .container-home{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -166,7 +167,7 @@ input{
   width: 50%;
 }
 
-.container.right-panel-active .login-container{
+.container-home.right-panel-active .login-container{
   transform: translateX(100%);
 }
 
@@ -176,7 +177,7 @@ input{
   opacity: 0;
 }
 
-.container.right-panel-active .register-container{
+.container-home.right-panel-active .register-container{
   transform: translateX(100%);
   opacity: 1;
   animation: show 0.6s
@@ -203,23 +204,33 @@ input{
   transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay-container{
+.container-home.right-panel-active .overlay-container{
   transform: translateX(-100%);
 }
 
+//.overlay{
+//  background-image: url("./bg.gif");
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  background-position: 0 0;
+//  color: #fff;
+//  position: relative;
+//  left: -100%;
+//  height: 100%;
+//  width: 200%;
+//  transform: translateX(0);
+//  transition: transform 0.6s ease-in-out;
+//}
+
 .overlay{
-  background-image: url("src/assets/bg.gif");
+  background-image: url("./bg5.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
-  color: #fff;
-  position: relative;
-  left: -100%;
+  left: 0;
   height: 100%;
-  width: 200%;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
+  width: 100%;
 }
+
 
 .overlay::before{
   content: "";
@@ -229,13 +240,13 @@ input{
   top: 0;
   bottom: 0;
   background: linear-gradient(
-    to top,
-    rgba(46, 94, 109, 0.4) 40%,
-    rgba(46, 94, 109, 0.4)
+      to top,
+      rgba(46, 94, 109, 0.4) 40%,
+      rgba(46, 94, 109, 0.4)
   );
 }
 
-.container.right-panel-active .overlay{
+.container-home.right-panel-active .overlay{
   transform: translateX(50%);
 }
 
@@ -258,7 +269,7 @@ input{
   transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left{
+.container-home.right-panel-active .overlay-left{
   transform: translateX(0);
 }
 
@@ -267,7 +278,7 @@ input{
   transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right{
+.container-home.right-panel-active .overlay-right{
   transform: translateX(20%);
 }
 
@@ -309,4 +320,3 @@ button{
   font-size: 10px;
   text-align: center;
 }
-

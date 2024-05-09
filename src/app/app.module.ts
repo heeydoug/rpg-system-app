@@ -17,6 +17,11 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import {MatCardModule} from '@angular/material/card';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
+import {MatToolbar} from "@angular/material/toolbar";
+import {MatIcon} from "@angular/material/icon";
+import {MatDrawer, MatDrawerContainer} from "@angular/material/sidenav";
+import { MenuComponent } from './components/menu/menu.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 @NgModule({
@@ -24,22 +29,28 @@ import {ToastrModule} from "ngx-toastr";
     AppComponent,
     LoginComponent,
     HomeComponent,
+    MenuComponent,
+    ButtonComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MatTabsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        FormsModule,
-        MatButtonModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireAuthModule,
-        MatCardModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        ToastrModule.forRoot(),
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    MatToolbar,
+    MatIcon,
+    MatDrawerContainer,
+    MatDrawer,
+  ],
   providers: [
     provideAnimationsAsync()
   ],
